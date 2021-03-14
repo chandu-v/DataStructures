@@ -9,6 +9,7 @@ DataStrucuture defines the way we
 * Store the Data
 * Perform Operations on data like:
   * Insert Data
+  * Remove Data
   * Traverse to the data structure
 
 ## Overview

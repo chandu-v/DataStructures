@@ -18,11 +18,10 @@ In this repository I'll create files to implement the data structures using Java
 
 ## DataTypes we discuss in the repository
 
-* Arrays
-* Dynamic Array or ArrayList
+* Arrays [Array Branch]
+* Dynamic Array or ArrayList [Array List Branch]
 * LinkedList
 * Double LinkedList
-* Circular LinkedList
 * Stack
 * Queue
 * Map/Dictionary

@@ -50,6 +50,7 @@ class StackClass {
 
     public StackClass insert(int value) {
         StackClass temp = this;
+        this.isEmpty = true;
         while(temp.next != null) {
             temp = temp.next;
         }

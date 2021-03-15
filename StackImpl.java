@@ -1,4 +1,3 @@
-import java.util.Stack;
 
 public class StackImpl {
 
@@ -24,7 +23,6 @@ public class StackImpl {
     }
 
     public static void printInOrder(StackClass root) {
-        StackClass temp = root;
         if(root.next == null){
             System.out.print(root.value+",");
         }else{

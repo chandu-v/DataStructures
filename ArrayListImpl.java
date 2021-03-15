@@ -5,7 +5,6 @@ public class ArrayListImpl {
     // Driver Class
     public static void main(String[] args) {
         ArrayListClass arrayList = new ArrayListClass(null, -1);
-        int [] arr = null;
         arrayList = arrayList.insertAtLast(1, arrayList.lastIndex);
         arrayList = arrayList.insertAtLast(2, arrayList.lastIndex);
         arrayList = arrayList.insertAtLast(3, arrayList.lastIndex);

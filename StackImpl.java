@@ -8,24 +8,36 @@ public class StackImpl {
         root.insert(3);
         root.insert(4);
         root.insert(5);
-        print(root);
+        printInRevOrder(root);
+        printInOrder(root);
+        System.out.println();
         root.pop();
         System.out.println(root.peek());
-        print(root);
     }
     
-    public static void print(StackClass root) {
+    public static void printInRevOrder(StackClass root) {
         while(root != null) {
             System.out.print(root.value+",");
             root = root.next;
         }
         System.out.println();
     }
+
+    public static void printInOrder(StackClass root) {
+        StackClass temp = root;
+        if(root.next == null){
+            System.out.print(root.value+",");
+        }else{
+            printInOrder(root.next);
+            System.out.print(root.value+",");
+        }
+    }
 }
 
 class StackClass {
     int value;
     StackClass next;
+    boolean isEmpty = false;
 
     public StackClass(int value) {
          this.value = value;
@@ -48,10 +60,15 @@ class StackClass {
 
     public StackClass pop() {
         StackClass temp = this;
-        while(temp.next.next != null) {
-            temp = temp.next;
+        if(temp.next != null) {
+            while(temp.next.next != null) {
+                temp = temp.next;
+            }
+            temp.next = null;
+        } else{
+            this.value = -1;
+            this.isEmpty = true;
         }
-        temp.next = null;
         return this;
     }
 
